@@ -13,6 +13,8 @@
 		3DDA7B6B1A94D5F900CA4019 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DDA7B6A1A94D5F900CA4019 /* Images.xcassets */; };
 		3DDA7B6E1A94D5F900CA4019 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DDA7B6C1A94D5F900CA4019 /* LaunchScreen.xib */; };
 		3DDA7B7A1A94D5F900CA4019 /* GameBoredTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA7B791A94D5F900CA4019 /* GameBoredTests.swift */; };
+		3DDA7B841A94D9D100CA4019 /* GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA7B831A94D9D100CA4019 /* GameBoardView.swift */; };
+		3DDA7B861A94E33300CA4019 /* GamePeace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA7B851A94E33300CA4019 /* GamePeace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		3DDA7B731A94D5F900CA4019 /* GameBoredTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameBoredTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDA7B781A94D5F900CA4019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DDA7B791A94D5F900CA4019 /* GameBoredTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoredTests.swift; sourceTree = "<group>"; };
+		3DDA7B831A94D9D100CA4019 /* GameBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoardView.swift; sourceTree = "<group>"; };
+		3DDA7B851A94E33300CA4019 /* GamePeace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePeace.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +83,9 @@
 			children = (
 				3DDA7B631A94D5F900CA4019 /* AppDelegate.swift */,
 				3DDA7B651A94D5F900CA4019 /* ViewController.swift */,
+				3DDA7B831A94D9D100CA4019 /* GameBoardView.swift */,
+				3DDA7B851A94E33300CA4019 /* GamePeace.swift */,
 				3DDA7B671A94D5F900CA4019 /* Main.storyboard */,
-				3DDA7B6A1A94D5F900CA4019 /* Images.xcassets */,
-				3DDA7B6C1A94D5F900CA4019 /* LaunchScreen.xib */,
 				3DDA7B611A94D5F900CA4019 /* Supporting Files */,
 			);
 			path = GameBored;
@@ -90,6 +94,8 @@
 		3DDA7B611A94D5F900CA4019 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3DDA7B6A1A94D5F900CA4019 /* Images.xcassets */,
+				3DDA7B6C1A94D5F900CA4019 /* LaunchScreen.xib */,
 				3DDA7B621A94D5F900CA4019 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -214,6 +220,8 @@
 			files = (
 				3DDA7B661A94D5F900CA4019 /* ViewController.swift in Sources */,
 				3DDA7B641A94D5F900CA4019 /* AppDelegate.swift in Sources */,
+				3DDA7B861A94E33300CA4019 /* GamePeace.swift in Sources */,
+				3DDA7B841A94D9D100CA4019 /* GameBoardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
