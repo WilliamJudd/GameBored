@@ -8,52 +8,86 @@
 
 import UIKit
 
-/// 0 = empty, 1 = player1, 2 = player2
 
 
 
-
-
-let boardSquares = [
-
-    [0,1,0,1,0,1,0,1],
-    [1,0,1,0,1,0,1,0],
-    [0,1,0,1,0,1,0,1],
-    [0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0],
-    [2,0,2,0,2,0,2,0],
-    [0,2,0,2,0,2,0,2],
-    [2,0,2,0,2,0,2,0]
-
-]
-
-// board squares [row][col]
-
-
-@ IBDesignable class GameBoardView: UIView {
+@ IBDesignable class GameBoardView: UIView, GamePieceDelegate {
     
     let gridSize = 8
     
-    override func awakeFromNib() {
+    override func layoutSubviews() {
     
-        for (rowIndex,rowArray) in enumerate(boardSquares)  {
+        if let boardSquares = DataModel.mainData().currentGame?.boardSquares {
             
-            for (columnIndex,squarePieceType) in enumerate(rowArray) {
+            for (rowIndex,rowArray) in enumerate(boardSquares)  {
                 
-                println(squarePieceType)
-                if let type = PieceType(rawValue: squarePieceType) {
+                for (columnIndex,squarePieceType) in enumerate(rowArray) {
                     
-                    var piece = GamePeace(type: type)
+                    
+                    if squarePieceType == 0{continue}
+                    
+                    if let type = PieceType(rawValue: squarePieceType) {
+                        
+                        var piece = GamePeace(type: type)
+                        
+                        piece.square = (columnIndex,rowIndex)
+                        
+                        DataModel.mainData().currentGame?.boardPieces[rowIndex][columnIndex] = piece
+                        
+                        let cF = CGFloat(columnIndex)
+                        let rF = CGFloat(rowIndex)
+                        
+                        println(frame.width)
+                        
+                        let squareSize = frame.width / CGFloat(gridSize)
+                        
+                        let x = cF * squareSize + squareSize / 2
+                        let y = rF * squareSize + squareSize / 2
+                        
+                        piece.center = CGPointMake(x,y)
+                        
+                        addSubview(piece)
+                        
+                        
+                    }
                     
                 }
-                
-                
-//                var piece = GamePeace(type: PieceType.Player1)
-                
-                
             }
+            
         }
+        
+        
     }
+    
+    func piecesSelected(piece: GamePeace) {
+        
+        // piece.square is your start point
+        
+        let (c,r) = piece.square
+        let squareTopRight = DataModel.mainData().currentGame?.boardPieces[c + 1][r - 1]
+        
+        
+        // do something with piece
+    
+    
+    }
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    
+        if let touch = touches.allObjects.last as? UITouch {
+            
+            let location = touch.locationInView(self)
+            
+            let squareSize = frame.width / CGFloat(gridSize)
+
+            let col = Int(floor(location.x / squareSize))
+            let row = Int(floor(location.y / squareSize))
+            
+            let selectedSquare = DataModel.mainData().currentGame?.boardPieces[row][col]
+            
+        }
+    
+    }
+
     
     
     

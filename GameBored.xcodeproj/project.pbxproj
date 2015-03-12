@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D069AB21A963266002E9C38 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D069AB11A963266002E9C38 /* GameModel.swift */; };
 		3DDA7B641A94D5F900CA4019 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA7B631A94D5F900CA4019 /* AppDelegate.swift */; };
 		3DDA7B661A94D5F900CA4019 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA7B651A94D5F900CA4019 /* ViewController.swift */; };
 		3DDA7B691A94D5F900CA4019 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDA7B671A94D5F900CA4019 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		3DDA7B7A1A94D5F900CA4019 /* GameBoredTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA7B791A94D5F900CA4019 /* GameBoredTests.swift */; };
 		3DDA7B841A94D9D100CA4019 /* GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA7B831A94D9D100CA4019 /* GameBoardView.swift */; };
 		3DDA7B861A94E33300CA4019 /* GamePeace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA7B851A94E33300CA4019 /* GamePeace.swift */; };
+		3DDA7B8C1A96253300CA4019 /* TODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA7B8B1A96253300CA4019 /* TODO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D069AB11A963266002E9C38 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		3D069AB31A96398C002E9C38 /* Logic.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Logic.playground; sourceTree = "<group>"; };
 		3DDA7B5E1A94D5F900CA4019 /* GameBored.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameBored.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDA7B621A94D5F900CA4019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DDA7B631A94D5F900CA4019 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +44,7 @@
 		3DDA7B791A94D5F900CA4019 /* GameBoredTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoredTests.swift; sourceTree = "<group>"; };
 		3DDA7B831A94D9D100CA4019 /* GameBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoardView.swift; sourceTree = "<group>"; };
 		3DDA7B851A94E33300CA4019 /* GamePeace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePeace.swift; sourceTree = "<group>"; };
+		3DDA7B8B1A96253300CA4019 /* TODO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +89,10 @@
 				3DDA7B631A94D5F900CA4019 /* AppDelegate.swift */,
 				3DDA7B651A94D5F900CA4019 /* ViewController.swift */,
 				3DDA7B831A94D9D100CA4019 /* GameBoardView.swift */,
+				3D069AB11A963266002E9C38 /* GameModel.swift */,
+				3DDA7B8B1A96253300CA4019 /* TODO.swift */,
 				3DDA7B851A94E33300CA4019 /* GamePeace.swift */,
+				3D069AB31A96398C002E9C38 /* Logic.playground */,
 				3DDA7B671A94D5F900CA4019 /* Main.storyboard */,
 				3DDA7B611A94D5F900CA4019 /* Supporting Files */,
 			);
@@ -218,10 +226,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DDA7B8C1A96253300CA4019 /* TODO.swift in Sources */,
 				3DDA7B661A94D5F900CA4019 /* ViewController.swift in Sources */,
 				3DDA7B641A94D5F900CA4019 /* AppDelegate.swift in Sources */,
 				3DDA7B861A94E33300CA4019 /* GamePeace.swift in Sources */,
 				3DDA7B841A94D9D100CA4019 /* GameBoardView.swift in Sources */,
+				3D069AB21A963266002E9C38 /* GameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +423,7 @@
 				3DDA7B7F1A94D5F900CA4019 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DDA7B801A94D5F900CA4019 /* Build configuration list for PBXNativeTarget "GameBoredTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +432,7 @@
 				3DDA7B821A94D5F900CA4019 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
